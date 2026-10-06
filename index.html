@@ -1,37 +1,394 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>For Anshika ❤️</title>
+
 <style>
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,serif}
-body{background:linear-gradient(135deg,#fff1f7,#ffd9e8 45%,#f4b8d1);color:#541d3c;overflow-x:hidden}
-.wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.card{width:min(820px,100%);background:rgba(255,255,255,.91);backdrop-filter:blur(14px);border-radius:30px;padding:34px 22px;box-shadow:0 25px 80px rgba(100,25,65,.25);text-align:center;position:relative;overflow:hidden}
-h1{font-size:clamp(38px,9vw,70px);margin:8px 0;color:#a72863;line-height:1.05}h2{font-size:28px;margin:8px 0 14px}
-.sub{font:16px/1.8 Arial,sans-serif;color:#7b4864}.step{display:none;animation:fade .7s ease}.step.active{display:block}
-button{border:0;border-radius:999px;padding:14px 25px;margin:8px;background:#b92f6b;color:#fff;font-weight:700;font-size:16px;cursor:pointer;box-shadow:0 10px 24px #b92f6b38}
-button.alt{background:#fff;color:#a72863;border:1px solid #e8aac6}.heart{font-size:68px;animation:pulse 1.6s infinite}
-.progress{height:5px;background:#f1d6e2;border-radius:10px;margin-bottom:22px}.bar{height:100%;width:20%;background:#b92f6b;border-radius:10px;transition:.5s}
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:20px 0}.gallery img{width:100%;height:270px;object-fit:contain;border-radius:20px;box-shadow:0 10px 25px #75224730}.gallery img:first-child{grid-column:span 2;height:350px}
-.preview{background:#fff6fa;border-radius:24px;padding:25px;margin:18px 0;text-align:left}.message{white-space:pre-wrap;line-height:1.9;font-size:17px}
-.quote{font-style:italic;text-align:center;color:#9a5375;font-size:18px;margin:22px 0}.small{font:13px Arial;color:#95627b}
-#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}.float{position:absolute;bottom:-30px;animation:rise linear forwards;opacity:.7}
-@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}@keyframes pulse{50%{transform:scale(1.12)}}@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-@media(max-width:600px){.card{padding:26px 16px}.gallery{grid-template-columns:1fr}.gallery img:first-child{grid-column:auto;height:330px}.gallery img{height:300px}}
-</style></head><body><div id="hearts"></div><div class="wrap"><main class="card">
-<div class="progress"><div class="bar" id="bar"></div></div>
-<section class="step active"><div class="heart">💗</div><h1>For Anshika</h1>
-<p class="sub">I made a little corner of the internet just for you.<br>Because you deserve more than just a birthday wish. ❤️</p>
-<button onclick="next()">Open Your Surprise ✨</button></section>
-<section class="step"><div class="heart">🥰</div><h2>Hey, beautiful…</h2>
-<p class="sub">Before you see the surprise, I just want you to know one thing:</p>
-<div class="quote">“Having you in my life makes ordinary days feel a little more special.”</div>
-<button onclick="next()">Keep going 💕</button></section>
-<section class="step"><h2>A few of my favourite views ❤️</h2>
-<p class="sub">And yes… you're the best part of every picture.</p>
-<div class="gallery"><img src="anshika-1.jpeg"><img src="anshika-2.jpeg"><img src="anshika-3.jpeg"><img src="anshika-4.jpeg"><img src="anshika-5.jpeg"><img src="anshika-6.jpeg"><img src="anshika-7.jpeg"><img src="anshika-8.jpeg"><img src="anshika-9.jpeg"><img src="anshika-10.jpeg"></div>
-<button onclick="next()">One last thing… 💌</button></section>
-<section class="step"><h2>A message from me to you 💌</h2>
-<textarea id="msg">Happy Birthday, Anshika! ❤️
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  min-height:100%;
+  font-family:Georgia,serif;
+}
+
+body{
+  background:linear-gradient(135deg,#fff1f7,#ffd9e8 45%,#f4b8d1);
+  color:#541d3c;
+  overflow-x:hidden;
+}
+
+.wrap{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.card{
+  width:min(820px,100%);
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);
+  border-radius:30px;
+  padding:34px 22px;
+  box-shadow:0 25px 80px rgba(100,25,65,.25);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* HEADINGS */
+
+h1{
+  font-size:clamp(38px,9vw,70px);
+  margin:8px 0;
+  color:#a72863;
+  line-height:1.05;
+}
+
+h2{
+  font-size:28px;
+  margin:8px 0 14px;
+}
+
+.sub{
+  font:16px/1.8 Arial,sans-serif;
+  color:#7b4864;
+}
+
+/* STEPS */
+
+.step{
+  display:none;
+  animation:fade .7s ease;
+}
+
+.step.active{
+  display:block;
+}
+
+/* BUTTONS */
+
+button{
+  border:0;
+  border-radius:999px;
+  padding:14px 25px;
+  margin:8px;
+  background:#b92f6b;
+  color:#fff;
+  font-weight:700;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(185,47,107,.22);
+  transition:.25s ease;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 28px rgba(185,47,107,.30);
+}
+
+button.alt{
+  background:#fff;
+  color:#a72863;
+  border:1px solid #e8aac6;
+}
+
+/* HEART */
+
+.heart{
+  font-size:68px;
+  animation:pulse 1.6s infinite;
+}
+
+/* PROGRESS BAR */
+
+.progress{
+  height:5px;
+  background:#f1d6e2;
+  border-radius:10px;
+  margin-bottom:22px;
+}
+
+.bar{
+  height:100%;
+  width:20%;
+  background:#b92f6b;
+  border-radius:10px;
+  transition:.5s;
+}
+
+/* =========================================
+   PHOTO GALLERY
+   ========================================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin:26px 0;
+  width:100%;
+  align-items:stretch;
+}
+
+.gallery img{
+  width:100%;
+  height:320px;
+  object-fit:contain;
+  display:block;
+  padding:7px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(117,34,71,.18);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.gallery img:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 30px rgba(117,34,71,.25);
+}
+
+/* MESSAGE */
+
+.preview{
+  background:#fff6fa;
+  border-radius:24px;
+  padding:25px;
+  margin:18px 0;
+  text-align:left;
+}
+
+.message{
+  white-space:pre-wrap;
+  line-height:1.9;
+  font-size:17px;
+}
+
+.quote{
+  font-style:italic;
+  text-align:center;
+  color:#9a5375;
+  font-size:18px;
+  margin:22px 0;
+}
+
+.small{
+  font:13px Arial;
+  color:#95627b;
+}
+
+/* FLOATING HEARTS */
+
+#hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:5;
+}
+
+.float{
+  position:absolute;
+  bottom:-30px;
+  animation:rise linear forwards;
+  opacity:.7;
+}
+
+/* ANIMATIONS */
+
+@keyframes rise{
+  to{
+    transform:translateY(-110vh) rotate(25deg);
+    opacity:0;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    transform:scale(1.12);
+  }
+}
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(14px);
+  }
+
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+/* =========================================
+   MOBILE VERSION
+   ========================================= */
+
+@media(max-width:600px){
+
+  .wrap{
+    padding:12px;
+  }
+
+  .card{
+    padding:26px 16px;
+    border-radius:24px;
+  }
+
+  h1{
+    font-size:44px;
+  }
+
+  h2{
+    font-size:25px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .gallery img{
+    width:100%;
+    height:320px;
+  }
+
+  button{
+    padding:13px 21px;
+    font-size:15px;
+  }
+
+  .message{
+    font-size:16px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<div class="wrap">
+
+<main class="card">
+
+<!-- PROGRESS -->
+<div class="progress">
+  <div class="bar" id="bar"></div>
+</div>
+
+
+<!-- ================================
+     STEP 1
+     ================================ -->
+
+<section class="step active">
+
+  <div class="heart">💗</div>
+
+  <h1>For Anshika</h1>
+
+  <p class="sub">
+    I made a little corner of the internet just for you.<br>
+    Because you deserve more than just a birthday wish. ❤️
+  </p>
+
+  <button onclick="next()">
+    Open Your Surprise ✨
+  </button>
+
+</section>
+
+
+<!-- ================================
+     STEP 2
+     ================================ -->
+
+<section class="step">
+
+  <div class="heart">🥰</div>
+
+  <h2>Hey, beautiful…</h2>
+
+  <p class="sub">
+    Before you see the surprise, I just want you to know one thing:
+  </p>
+
+  <div class="quote">
+    “Having you in my life makes ordinary days feel a little more special.”
+  </div>
+
+  <button onclick="next()">
+    Keep going 💕
+  </button>
+
+</section>
+
+
+<!-- ================================
+     STEP 3 - PHOTO GALLERY
+     ================================ -->
+
+<section class="step">
+
+  <h2>A few of my favourite views ❤️</h2>
+
+  <p class="sub">
+    And yes… you're the best part of every picture.
+  </p>
+
+  <div class="gallery">
+
+    <img src="anshika-1.jpeg" alt="Anshika Photo 1">
+
+    <img src="anshika-2.jpeg" alt="Anshika Photo 2">
+
+    <img src="anshika-3.jpeg" alt="Anshika Photo 3">
+
+    <img src="anshika-4.jpeg" alt="Anshika Photo 4">
+
+    <img src="anshika-5.jpeg" alt="Anshika Photo 5">
+
+    <img src="anshika-6.jpeg" alt="Anshika Photo 6">
+
+    <img src="anshika-7.jpeg" alt="Anshika Photo 7">
+
+    <img src="anshika-8.jpeg" alt="Anshika Photo 8">
+
+    <img src="anshika-9.jpeg" alt="Anshika Photo 9">
+
+    <img src="anshika-10.jpeg" alt="Anshika Photo 10">
+
+  </div>
+
+  <button onclick="next()">
+    One last thing… 💌
+  </button>
+
+</section>
+
+
+<!-- ================================
+     STEP 4 - MESSAGE
+     ================================ -->
+
+<section class="step">
+
+  <h2>A message from me to you 💌</h2>
+
+  <textarea
+    id="msg"
+    style="width:100%;min-height:300px;border:0;outline:0;background:transparent;font:17px/1.9 Georgia,serif;color:#541d3c;resize:none;"
+  >Happy Birthday, Anshika! ❤️
 
 I hope this little surprise makes you smile, because seeing you happy is one of my favourite things.
 
@@ -42,16 +399,152 @@ I hope this new year of your life brings you everything you've wished for — ha
 Keep being the amazing person you are.
 
 Happy Birthday, my favourite person. ❤️</textarea>
-<button onclick="next()">Open the final surprise ✨</button></section>
-<section class="step"><div class="heart">🎂</div><h1>Happy Birthday,<br>Anshika! ❤️</h1>
-<div class="preview"><p class="message" id="pmsg"></p></div>
-<div class="quote">“If I could gift you one thing, it would be the ability to see yourself through my eyes.” 💗</div>
-<button onclick="celebrate()">Celebrate You! 🎉</button><button class="alt" onclick="location.reload()">See it again ❤️</button>
-<p class="small">Made with love, just for Anshika.</p></section>
-</main></div>
+
+  <button onclick="next()">
+    Open the final surprise ✨
+  </button>
+
+</section>
+
+
+<!-- ================================
+     STEP 5 - FINAL
+     ================================ -->
+
+<section class="step">
+
+  <div class="heart">🎂</div>
+
+  <h1>
+    Happy Birthday,<br>
+    Anshika! ❤️
+  </h1>
+
+  <div class="preview">
+
+    <p class="message" id="pmsg"></p>
+
+  </div>
+
+  <div class="quote">
+    “If I could gift you one thing, it would be the ability to see yourself through my eyes.” 💗
+  </div>
+
+  <button onclick="celebrate()">
+    Celebrate You! 🎉
+  </button>
+
+  <button class="alt" onclick="location.reload()">
+    See it again ❤️
+  </button>
+
+  <p class="small">
+    Made with love, just for Anshika.
+  </p>
+
+</section>
+
+</main>
+
+</div>
+
+
 <script>
-let i=0,steps=document.querySelectorAll('.step');
-function next(){i=Math.min(i+1,steps.length-1);steps.forEach((s,n)=>s.classList.toggle('active',n===i));document.getElementById('bar').style.width=((i+1)/steps.length*100)+'%';if(i===4)document.getElementById('pmsg').textContent=document.getElementById('msg').value}
-function celebrate(){for(let n=0;n<70;n++)setTimeout(()=>{let x=document.createElement('span');x.className='float';x.textContent=['💖','💕','✨','🎉','🌸','💗','🥰'][Math.floor(Math.random()*7)];x.style.left=Math.random()*100+'%';x.style.fontSize=(18+Math.random()*28)+'px';x.style.animationDuration=(3+Math.random()*4)+'s';document.getElementById('hearts').appendChild(x);setTimeout(()=>x.remove(),8000)},n*45)}
-setInterval(()=>{let x=document.createElement('span');x.className='float';x.textContent='♥';x.style.left=Math.random()*100+'%';x.style.fontSize=(12+Math.random()*18)+'px';x.style.animationDuration=(6+Math.random()*5)+'s';document.getElementById('hearts').appendChild(x);setTimeout(()=>x.remove(),11000)},900);
-</script></body></html>
+
+let i = 0;
+
+let steps = document.querySelectorAll('.step');
+
+
+function next(){
+
+  i = Math.min(i + 1, steps.length - 1);
+
+  steps.forEach((s,n) => {
+
+    s.classList.toggle('active', n === i);
+
+  });
+
+  document.getElementById('bar').style.width =
+    ((i + 1) / steps.length * 100) + '%';
+
+
+  if(i === 4){
+
+    document.getElementById('pmsg').textContent =
+      document.getElementById('msg').value;
+
+  }
+
+}
+
+
+function celebrate(){
+
+  for(let n = 0; n < 70; n++){
+
+    setTimeout(() => {
+
+      let x = document.createElement('span');
+
+      x.className = 'float';
+
+      x.textContent = [
+        '💖',
+        '💕',
+        '✨',
+        '🎉',
+        '🌸',
+        '💗',
+        '🥰'
+      ][Math.floor(Math.random() * 7)];
+
+      x.style.left = Math.random() * 100 + '%';
+
+      x.style.fontSize =
+        (18 + Math.random() * 28) + 'px';
+
+      x.style.animationDuration =
+        (3 + Math.random() * 4) + 's';
+
+      document.getElementById('hearts').appendChild(x);
+
+      setTimeout(() => x.remove(),8000);
+
+    },n * 45);
+
+  }
+
+}
+
+
+/* Continuous floating hearts */
+
+setInterval(() => {
+
+  let x = document.createElement('span');
+
+  x.className = 'float';
+
+  x.textContent = '♥';
+
+  x.style.left =
+    Math.random() * 100 + '%';
+
+  x.style.fontSize =
+    (12 + Math.random() * 18) + 'px';
+
+  x.style.animationDuration =
+    (6 + Math.random() * 5) + 's';
+
+  document.getElementById('hearts').appendChild(x);
+
+  setTimeout(() => x.remove(),11000);
+
+},900);
+
+</script>
+
+</body>
+</html>
